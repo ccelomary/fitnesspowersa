@@ -1,29 +1,32 @@
-# fitnesspowersa Next.js Website
+# fitnesspowersa — Next.js 14 Gym Website
 
-Modern multi-page gym website built with Next.js 14 App Router, Tailwind CSS, shadcn-style UI, and Framer Motion.
+A colorful, conversion-focused gym website built with:
+- Next.js 14+ App Router
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- shadcn-style UI primitives
 
-## Features
-- App Router architecture with reusable components
-- Homepage sections: Hero, About, Services, Testimonials, Pricing
-- Dedicated Trainers and Contact pages
-- Animated UI with Framer Motion
-- Booking form using React Hook Form + Zod validation
-- SEO metadata with Open Graph
-- Google Maps embed
+## Pages
+- `/` Homepage (Hero, About, Offers, Services, Gallery, Pricing, Testimonials, Contact)
+- `/trainers` Trainer profiles
+- `/contact` Contact form + map
 
-## Install
-npm install
+## Local development
+1. Install dependencies:
+   npm install
+2. Run dev server:
+   npm run dev
+3. Open:
+   http://localhost:3000
 
-## Run locally
-npm run dev
-
-## Build for production
+## Build
 npm run build
 npm run start
 
-## Deploy to Vercel
-1. Push repository to GitHub.
-2. Import project in Vercel.
-3. Framework preset: Next.js.
-4. Keep default build command (`next build`).
+## Deploy on Vercel
+1. Push this repository to GitHub.
+2. Go to Vercel and import the project.
+3. Vercel auto-detects Next.js.
+4. Keep default build settings.
 5. Deploy.
