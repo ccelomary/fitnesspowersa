@@ -16,7 +16,7 @@ export function Gallery() {
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
       {images.map((id) => (
-        <motion.div key={id} whileHover={{ scale: 1.05 }} className="overflow-hidden rounded-2xl border border-white/10">
+        <motion.div key={id} whileHover={{ scale: 1.05 }} className="overflow-hidden rounded-2xl border border-amber-100/20">
           <Image
             src={`https://images.unsplash.com/${id}?auto=format&fit=crop&w=700&q=80`}
             alt="Gym gallery"

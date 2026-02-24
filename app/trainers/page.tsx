@@ -26,18 +26,20 @@ const trainers = [
 
 export default function TrainersPage() {
   return (
-    <section className="container py-20">
-      <h1 className="mb-8 text-4xl font-black">Our Trainers</h1>
-      <div className="grid gap-6 md:grid-cols-3">
-        {trainers.map((trainer) => (
-          <article key={trainer.name} className="overflow-hidden rounded-2xl border border-white/15 bg-white/5">
-            <Image src={trainer.image} alt={trainer.name} width={380} height={320} className="h-64 w-full object-cover" />
-            <div className="p-5">
-              <h2 className="text-xl font-bold">{trainer.name}</h2>
-              <p className="text-sm text-emerald-300">{trainer.role}</p>
-            </div>
-          </article>
-        ))}
+    <section className="container py-10 md:py-14">
+      <div className="desert-section">
+        <h1 className="desert-title">Our Trainers</h1>
+        <div className="grid gap-6 md:grid-cols-3">
+          {trainers.map((trainer) => (
+            <article key={trainer.name} className="desert-card overflow-hidden">
+              <Image src={trainer.image} alt={trainer.name} width={380} height={320} className="h-64 w-full object-cover" />
+              <div className="p-5">
+                <h2 className="text-xl font-bold text-amber-100">{trainer.name}</h2>
+                <p className="text-sm text-amber-300">{trainer.role}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

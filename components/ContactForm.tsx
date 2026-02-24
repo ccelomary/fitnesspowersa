@@ -32,18 +32,18 @@ export function ContactForm() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-4 rounded-2xl border border-white/15 bg-white/5 p-6"
+      className="desert-card space-y-4 p-6"
     >
-      <input {...register("name")} className="w-full rounded-lg border border-white/15 bg-black/30 p-3 text-white" placeholder="Full name" />
+      <input {...register("name")} className="w-full rounded-lg border border-amber-100/20 bg-black/20 p-3 text-white" placeholder="Full name" />
       {errors.name && <p className="text-xs text-red-300">{errors.name.message}</p>}
-      <input {...register("email")} className="w-full rounded-lg border border-white/15 bg-black/30 p-3 text-white" placeholder="Email" />
+      <input {...register("email")} className="w-full rounded-lg border border-amber-100/20 bg-black/20 p-3 text-white" placeholder="Email" />
       {errors.email && <p className="text-xs text-red-300">{errors.email.message}</p>}
-      <input {...register("phone")} className="w-full rounded-lg border border-white/15 bg-black/30 p-3 text-white" placeholder="Phone" />
+      <input {...register("phone")} className="w-full rounded-lg border border-amber-100/20 bg-black/20 p-3 text-white" placeholder="Phone" />
       {errors.phone && <p className="text-xs text-red-300">{errors.phone.message}</p>}
-      <textarea {...register("message")} className="min-h-28 w-full rounded-lg border border-white/15 bg-black/30 p-3 text-white" placeholder="What do you want to achieve?" />
+      <textarea {...register("message")} className="min-h-28 w-full rounded-lg border border-amber-100/20 bg-black/20 p-3 text-white" placeholder="What do you want to achieve?" />
       {errors.message && <p className="text-xs text-red-300">{errors.message.message}</p>}
-      <Button className="w-full bg-gradient-to-r from-emerald-400 to-fuchsia-500 text-white">Contact Us</Button>
-      {isSubmitSuccessful && <p className="text-sm text-emerald-300">Thanks! We’ll reach out shortly.</p>}
+      <Button className="w-full bg-gradient-to-r from-amber-400 to-orange-700 text-white">Contact Us</Button>
+      {isSubmitSuccessful && <p className="text-sm text-amber-300">Thanks! We’ll reach out shortly.</p>}
     </motion.form>
   );
 }

@@ -30,29 +30,29 @@ export function Nav() {
     <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className={`sticky top-0 z-50 transition-all ${scrolled ? "border-b border-white/20 bg-black/70 backdrop-blur-xl" : "bg-transparent"}`}
+      className={`sticky top-0 z-50 transition-all ${scrolled ? "border-b border-amber-100/20 bg-[#1b120d]/80 backdrop-blur-xl" : "bg-transparent"}`}
     >
       <nav className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 text-lg font-black text-white">
-          <Dumbbell className="h-5 w-5 text-emerald-300" />
+        <Link href="/" className="flex items-center gap-2 text-lg font-black text-amber-100">
+          <Dumbbell className="h-5 w-5 text-amber-300" />
           fitnesspowersa
         </Link>
 
         <button aria-label="Toggle Menu" className="md:hidden" onClick={() => setOpen((v) => !v)}>
-          <Menu className="text-white" />
+          <Menu className="text-amber-100" />
         </button>
 
         <ul className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <Link href={link.href} className="text-sm font-medium text-white/85 transition hover:text-emerald-300">
+              <Link href={link.href} className="text-sm font-medium text-amber-50/85 transition hover:text-amber-300">
                 {link.label}
               </Link>
             </li>
           ))}
           <li>
             <Link href="#contact">
-              <Button size="sm" className="bg-gradient-to-r from-fuchsia-500 to-emerald-400 text-white">
+              <Button size="sm" className="bg-gradient-to-r from-amber-500 to-orange-700 text-white">
                 Join Now
               </Button>
             </Link>
@@ -61,11 +61,11 @@ export function Nav() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/15 bg-black/90 px-4 py-4 md:hidden">
+        <div className="border-t border-amber-100/15 bg-[#1b120d]/95 px-4 py-4 md:hidden">
           <ul className="space-y-3">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <Link href={link.href} className="block text-white/85" onClick={() => setOpen(false)}>
+                <Link href={link.href} className="block text-amber-50/85" onClick={() => setOpen(false)}>
                   {link.label}
                 </Link>
               </li>
