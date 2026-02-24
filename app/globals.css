@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  @apply min-h-full;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-white antialiased;
+  background-color: #110a06;
+  background-image: radial-gradient(circle at 15% 15%, rgba(251, 191, 36, 0.16), transparent 30%),
+    radial-gradient(circle at 90% 8%, rgba(180, 83, 9, 0.22), transparent 28%);
+}
+
+@layer components {
+  .desert-section {
+    @apply rounded-3xl border border-amber-100/10 bg-gradient-to-br from-[#2d1a10]/70 via-[#1a110b]/65 to-[#120b07]/65 p-8 md:p-10;
+    background-image: radial-gradient(circle at 0% 0%, rgba(251, 191, 36, 0.13), transparent 40%);
+  }
+
+  .desert-card {
+    @apply rounded-2xl border border-amber-100/15 bg-gradient-to-br from-[#2f1f14]/75 to-[#1a120c]/80;
+  }
+
+  .desert-title {
+    @apply mb-8 text-3xl font-black text-amber-100 md:text-4xl;
+  }
+}
